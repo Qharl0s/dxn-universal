@@ -1,0 +1,33 @@
+.card-body a:hover {
+  text-decoration: none !important;
+}
+
+.post-titulo:hover {
+  color: #9d22ba;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.post-titulo-resc:hover {
+  text-decoration: none;
+}
+
+.media:hover {
+  background-color: #f8f6f5;
+}
+
+.post-titulo-resc h5 {
+  font-weight: 700 !important;
+  color: #4c4c4c;
+  font-size: 12px;
+}
+
+.post-titulo-resc span {
+  color: #4c4c4c;
+  font-size: 11px;
+}
+
+.post-titulo-resc:hover > .img-fluid {
+  transition: all 0.2s;
+  width: 100px;
+}

@@ -1,0 +1,64 @@
+.content {
+  padding: 30px;
+  margin-left: -3.5em;
+}
+
+.card-title {
+  margin-bottom: 0.1em;
+  color: #4c4c4c;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.prod-grid {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.producto_li {
+  display: inline-block;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  vertical-align: top;
+  /* height: 280px; */
+  width: 400px;
+}
+
+.bandera img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.bandera_activa img {
+  border-radius: 5px;
+  box-shadow: 6px 6px #d3d3d3;
+}
+
+.titulo_prod {
+  text-transform: uppercase;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.iconos {
+  display: flex;
+  justify-content: space-between;
+  color: #4c4c4c;
+  font-size: 18px;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+.img-div {
+  background: radial-gradient(#fff, #41e7e2);
+}

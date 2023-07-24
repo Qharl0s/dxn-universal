@@ -1,0 +1,105 @@
+{% extends 'main.html' %} {% block contenido %}
+<div class="container">
+  <!--Paises-->
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <br />
+      <div class="row align-items-center">
+        {% for pais in paises %}
+        <div1 class="col bandera text-center">
+          {%if pais.pais == 'perú'%}
+          <a href="#" class="bandera_a bandera_activa" data-pais="{{pais.pais}}"
+            ><img src="{{pais.bandera}}" class="img-fluid"
+          /></a>
+          {% else %}
+          <a href="#" class="bandera_a" data-pais="{{pais.pais}}"
+            ><img src="{{pais.bandera}}" class="img-fluid"
+          /></a>
+          {%endif%}
+        </div1>
+        {% endfor %}
+      </div>
+      <br />
+      <h2 class="text-center card-title titulo_prod">PERÚ</h2>
+      <br />
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <!--Categorias-->
+  <div class="row">
+    <div class="col align-items-center text-center">
+      <input
+        checked
+        data-radiocharm-background-color="9d22ba"
+        data-radiocharm-label="Alimentos y Bebidas"
+        type="radio"
+        value="Alimentos"
+        class="categoria"
+      />
+      <input
+        data-radiocharm-label="Suplementos"
+        data-radiocharm-background-color="9d22ba"
+        type="radio"
+        value="Suplementos"
+        class="categoria"
+      />
+      <input
+        data-radiocharm-label="Cuidado Personal"
+        data-radiocharm-background-color="9d22ba"
+        type="radio"
+        value="Cuidado"
+        class="categoria"
+      />
+      <input
+        data-radiocharm-label="Electrodomésticos"
+        data-radiocharm-background-color="9d22ba"
+        type="radio"
+        value="Electrodomesticos"
+        class="categoria"
+      />
+    </div>
+  </div>
+  <hr />
+  <!--Productos-->
+
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="prod-grid">
+        {% for producto in productos %}
+        <li
+          class="producto_li"
+          data-categoria="{{producto.categoria}}"
+          data-paises="{{producto.pais}}"
+          style="display: inline-block"
+        >
+          <div class="card flex-row shadow">
+            <div class="content">
+              <div class="shadow rounded border img-div">
+                <img
+                  width="150"
+                  class="card-img-left example-card-img-responsive"
+                  src="http://{{ request.get_host }}/media/{{producto.imagen}}"
+                />
+              </div>
+            </div>
+            <div class="card-body prod_desc">
+              <h4 class="card-title">{{producto.producto}}</h4>
+              <div class="card-text line-clamp text-justify">
+                {{producto.descripcion|safe}}
+              </div>
+              <div class="text-right">
+                <i
+                  class="fa fa-angle-double-right leer_mas"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}

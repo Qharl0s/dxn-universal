@@ -1,0 +1,7 @@
+{% extends 'main.html' %} {% block contenido %}
+<script>
+  const sliderDb = JSON.parse("{{publicaciones_|escapejs}}");
+</script>
+
+<div class="slider-container"></div>
+{% endblock contenido %}

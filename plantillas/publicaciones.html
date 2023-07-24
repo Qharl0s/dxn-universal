@@ -1,0 +1,58 @@
+{% extends 'main.html' %} {% block contenido %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <br />
+      {% for post in publicaciones %}
+      <div class="card shadow">
+        <img
+          class="card-img-top"
+          src="http://{{ request.get_host }}/media/{{post.imagen}}"
+          alt="{{post.titulo}}"
+        />
+        <div class="card-body">
+          <a href="http://{{ request.get_host }}/publicaciones/{{post.titulo}}"><h4 class="post-titulo card-title text-center">{{post.titulo}}</h4></a>
+          
+          <div class="card-text line-clamp text-justify">
+            {{post.contenido|safe| truncatewords:"40"}}
+          </div>
+          <a
+            href="http://{{ request.get_host }}/publicaciones/{{post.titulo}}"
+            class="btn btn-morado float-right">Leer más</a>
+        </div>
+      </div>
+      <br />
+      <br />
+      {% endfor %}
+    </div>
+    <div class="col-md-4">
+      <br />
+      <div class="card text-center shadow">
+        <h4 class="card-title p-2">RECIENTES</h4>
+        <ul class="list-unstyled"></ul>
+        {%for post in publicaciones|slice:":5"%}
+            <li class="media">
+                <a href="http://{{ request.get_host }}/publicaciones/{{post.titulo}}" class="post-titulo-resc">
+                  <div class="media p-2">
+                    <img
+                      class="d-flex mr-3 img-fluid rounded"
+                      width="90"
+                      src="http://{{ request.get_host }}/media/{{post.imagen}}"
+                      alt="{{post.titulo}}"
+                    />
+                    <div class="text-justify">
+                      <h5>{{post.titulo}}</h5>
+                      <span><i class="fa fa-calendar"></i> {{post.creado|date:"d/m/Y h:m a"}}</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+        {%endfor%}
+    </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock contenido %}

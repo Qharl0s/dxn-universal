@@ -1,0 +1,67 @@
+.avatar {
+  position: relative;
+  line-height: 1;
+  border-radius: 500px;
+  white-space: nowrap;
+  font-weight: 700;
+  border-radius: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 500px;
+  box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.15);
+  margin-right: 10px;
+}
+
+.gd-primary {
+  color: #fff;
+  border: none;
+  background: #949494;
+}
+
+.list {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.list-item {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.list-row .list-item {
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.75rem 0.625rem;
+  max-width: 50rem;
+}
+
+.list-row .list-item > * {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.text-sm {
+  font-size: 0.825rem;
+}
+
+.w-48 {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+a:link {
+  text-decoration: none;
+}

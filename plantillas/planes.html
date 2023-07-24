@@ -1,0 +1,114 @@
+{% extends 'main.html' %} {% block contenido %}
+<div class="container">
+  <div id="pricing-table">
+    <div class="plan col-sm-3" id="IOC">
+      <h3>Kit IOC<span>s/760</span></h3>
+      <a class="btn btn-morado open-modal" data-plan="Kit IOC">Registrarme</a>
+      <ul>
+        <li>Registro</li>
+        <li>Compra a precio de distribuidor</li>
+        <li>Comisiones</li>
+        <li>Tu página web</li>
+        <li>760 soles completos de productos DXN que usted quiera</li>
+      </ul>
+    </div>
+    <div class="plan col-sm-3" id="premiun">
+      <h3>Kit Premiun<span>s/90</span></h3>
+      <a class="btn btn-morado open-modal" data-plan="Kit Premiun"
+        >Registrarme</a
+      >
+      <ul>
+        <li>Registro</li>
+        <li>Compra a precio de distribuidor</li>
+        <li>Comisiones</li>
+        <li>Tu página web</li>
+        <li>Catalogo y 1 Cafe Lingzhi 3 en 1</li>
+      </ul>
+    </div>
+    <div class="plan col-sm-3" id="basico">
+      <h3>Kit Básico<span>s/60</span></h3>
+      <a class="btn btn-morado open-modal" data-plan="Kit Básico"
+        >Registrarme</a
+      >
+      <ul>
+        <li>Registro</li>
+        <li>Compra a precio de distribuidor</li>
+        <li>Comisiones</li>
+        <li>Tu página web</li>
+        <li>Catalogo</li>
+      </ul>
+    </div>
+    <div class="plan col-sm-3" id="gratis">
+      <h3>On Line<span>Gratis</span></h3>
+      <a
+        href="https://eworld.dxn2u.com/index.php?r=account/register&dlang=es&mc=360094496"
+        target="_blank"
+        class="btn btn-morado"
+        >Registrarme</a
+      >
+      <ul>
+        <li>Registro</li>
+        <li>Compra a precio de distribuidor</li>
+        <li>Comisiones</li>
+        <li>Tu página web</li>
+        <li>-</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmar Registro</h5>
+        <button
+          type="button"
+          class="close close-modal"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nombres">Plan:</label>
+            <input type="text" class="form-control" id="plan" disabled />
+          </div>
+          <div class="form-group">
+            <label for="nombres">Nombre:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombres"
+              placeholder="Ingresa tu nombre"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email y/o Celular:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              aria-describedby="Tu email"
+              placeholder="Ingresa tu email y/o Celular"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Confirmar</button>
+        <button
+          type="button"
+          class="btn btn-secondary close-modal"
+          data-dismiss="modal"
+        >
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}
