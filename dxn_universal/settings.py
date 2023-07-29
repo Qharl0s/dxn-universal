@@ -73,7 +73,7 @@ TEMPLATES = [
 ]
 
 # WSGI_APPLICATION = 'dxn_universal.wsgi.application'
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
+WSGI_APPLICATION = 'dxn_universal.wsgi.app'
 
 
 # Database
