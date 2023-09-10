@@ -88,8 +88,8 @@ DATABASES = {
     }
 }
 
-#DATABASES['default'] = dj_database_url.config(default="postgres://default:AEKq7yGo5uDx@ep-flat-dawn-92817074.us-east-1.postgres.vercel-storage.com:5432/verceldb")
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(default="postgres://default:AEKq7yGo5uDx@ep-flat-dawn-92817074.us-east-1.postgres.vercel-storage.com:5432/verceldb")
+#DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
@@ -130,7 +130,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 #STATIC_ROOT = BASE_DIR / "staticfiles_build" / "static"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 

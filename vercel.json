@@ -6,14 +6,14 @@
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     },
     {
-        "src": "build_files.sh",
+        "src": "build.sh",
         "use": "@vercel/static-build",
-        "config": { "distDir": "staticfiles_build" }
+        "config": { "distDir": "static" }
     }],
     "routes": [
         {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
+            "src": "static/(.*)",
+            "dest": "static/$1"
         },
         {
             "src": "/(.*)",
@@ -21,5 +21,5 @@
         }
     ],
 
-    "outputDirectory": "staticfiles_build"
+    "outputDirectory": "static"
 }
