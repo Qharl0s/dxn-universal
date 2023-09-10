@@ -26,5 +26,6 @@
             "src": "/(.*)",
             "dest": "dxn_universal/wsgi.py"
         }
-    ]
+    ],
+    "outputDirectory": "staticfiles"
 }
