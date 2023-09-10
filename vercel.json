@@ -1,25 +1,27 @@
 {
     "version": 2,
-    "builds": [{
-        "src": "dxn_universal/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    },
-    {
-        "src": "build.sh",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "static" }
-    }],
-    "routes": [
+    "name": "application-name",
+    "builds": [
         {
-            "src": "static/(.*)",
-            "dest": "static/$1"
+            "src": "dxn_universal/wsgi.py",
+            "use": "@ardnt/now-python-wsgi",
+            "config": {
+                "maxLambdaSize": "30mb"
+            }
         },
+        {
+            "src": "build_files.sh",
+            "use": "@vercel/static",
+            "config": {
+                "distDir": "staticfiles"
+            }
+        }
+    ],
+    "routes": [
         {
             "src": "/(.*)",
             "dest": "dxn_universal/wsgi.py"
         }
     ],
-
     "outputDirectory": "static"
 }
