@@ -5,9 +5,9 @@ python3.9 -m pip install -r requirements.txt
 
 echo "Iniciando migraciones.."
 
-python3.exe .\manage.py makemigrations --noinput
-python3.exe .\manage.py migrate --noinput
+python3.9 .\manage.py makemigrations --noinput
+python3.9 .\manage.py migrate --noinput
 
 echo "Colecciones estaticas.."
-python3.exe .\manage.py collectstatic
-python3.exe .\manage.py collectstatic --noinput
+python3.9 .\manage.py collectstatic --noinput --clear
+echo "fin.."

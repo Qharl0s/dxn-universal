@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'dxn_universal.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 DATABASES['default'] = dj_database_url.config(default="postgres://default:AEKq7yGo5uDx@ep-flat-dawn-92817074.us-east-1.postgres.vercel-storage.com:5432/verceldb")
@@ -130,7 +130,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 #STATIC_ROOT = BASE_DIR / "staticfiles_build" / "static"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
 #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
