@@ -9,5 +9,5 @@ python3.exe .\manage.py makemigrations --noinput
 python3.exe .\manage.py migrate --noinput
 
 echo "Colecciones estaticas.."
-python.exe .\manage.py collectstatic
-python3.exe .\manage.py collectstatic --noinput --clear
+python3.exe .\manage.py collectstatic
+python3.exe .\manage.py collectstatic --noinput
