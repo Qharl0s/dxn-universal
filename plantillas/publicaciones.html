@@ -8,7 +8,7 @@
       <div class="card shadow">
         <img
           class="card-img-top"
-          src="http://{{ request.get_host }}/media/{{post.imagen}}"
+          src="{{post.imagen_url}}"
           alt="{{post.titulo}}"
         />
         <div class="card-body">
@@ -38,7 +38,7 @@
                     <img
                       class="d-flex mr-3 img-fluid rounded"
                       width="90"
-                      src="http://{{ request.get_host }}/media/{{post.imagen}}"
+                      src="{{post.imagen_url}}"
                       alt="{{post.titulo}}"
                     />
                     <div class="text-justify">

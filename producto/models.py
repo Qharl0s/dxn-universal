@@ -9,7 +9,8 @@ CATEGORIA = (
 
 class Producto(models.Model):
   producto = models.CharField('Producto', max_length=360, default='')
-  imagen = models.ImageField(upload_to='producto/imagenes/')
+  #imagen = models.ImageField(upload_to='producto/imagenes/')
+  imagen_url = models.CharField('Url', max_length=1200, default='')
   descripcion = models.TextField('Descripción', default='')
   categoria = models.CharField('Categoría', choices=CATEGORIA, default="Alimentos",  max_length=20)
   pais = models.CharField('Pais', max_length=360, default='peru')

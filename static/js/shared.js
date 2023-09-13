@@ -1,5 +1,5 @@
 $(document).on('click', ".shared", function() {
-	var url = "https://www.monetizatutiempo.com/2021/07/iconos-de-redes-sociales-en-blogger.html";//window.location.href;
+	var url = ""//"https://www.monetizatutiempo.com/2021/07/iconos-de-redes-sociales-en-blogger.html";//window.location.href;
 	var title = document.title;
 
 	url = encodeURIComponent(url);

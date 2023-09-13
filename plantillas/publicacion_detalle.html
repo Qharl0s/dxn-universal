@@ -4,9 +4,10 @@
     <div class="col-md-8">
       <br /><br />
       <div class="card shadow">
+        <!--src="http://{{ request.get_host }}/media/{{publicacion.imagen}}"-->
         <img
           class="card-img-top"
-          src="http://{{ request.get_host }}/media/{{publicacion.imagen}}"
+          src="{{publicacion.imagen_url}}"
           alt="{{publicacion.titulo}}"
         />
         <div class="card-body">
@@ -38,10 +39,11 @@
               <li class="media">
                   <a href="http://{{ request.get_host }}/publicaciones/{{post.titulo}}" class="post-titulo-resc">
                     <div class="media p-2">
+                      <!--src="http://{{ request.get_host }}/media/{{post.imagen}}"-->
                       <img
                         class="d-flex mr-3 img-fluid rounded"
                         width="90"
-                        src="http://{{ request.get_host }}/media/{{post.imagen}}"
+                        src="{{publicacion.imagen_url}}"
                         alt="{{post.titulo}}"
                       />
                       <div class="text-justify">
